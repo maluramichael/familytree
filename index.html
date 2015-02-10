@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <style>
+    body {
+        padding: 0px;
+        margin: 0px;
+        text-align: center;
+    }
+    svg {
+        background-color: #efefef;
+        cursor: pointer;
+        margin: 0 auto;
+    }
+    .node,
+    .legendNode {
+        stroke: #fff;
+        stroke-width: 1.5px;
+    }
+    .link {
+        stroke: #999;
+        stroke-opacity: .6;
+    }
+    text {
+        font-family: Helvetica;
+    }
+    .legend text {
+        text-anchor: start;
+    }
+    .graph text {
+        text-anchor: middle;
+    }
+    </style>
+    <link rel="stylesheet" href="semantic.min.css">
+</head>
+
+<body ng-app='app' ng-controller='graph'>
+    <graph ng-model='nodes'></graph>
+    <div class="ui stackable two column grid">
+        <div class="column">
+            <!-- <svg ng-model='nodes'></svg> -->
+        </div>
+        <div class="column">
+            <form action="" class="ui form">
+                <div class="field">
+                    <label for="">Name</label>
+                    <input type="text" />
+                </div>
+                <div class="field">
+                    <label for="">Familienname</label>
+                    <input type="text" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src='jquery.min.js'></script>
+    <script src='underscore-min.js'></script>
+    <script src='d3.min.js'></script>
+    <script src='angular.js'></script>
+    <script src='app.js'></script>
+    <script src='graph.js'></script>
+</body>
+
+</html>
